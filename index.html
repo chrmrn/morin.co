@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morin</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/bodoni-moda-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Bodoni Moda";
+      src: url("fonts/bodoni-moda-400.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    :root {
+      --bg: #f6f4ef;
+      --ink: #1a1a1a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --ink: #ece9e2;
+      }
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Bodoni Moda", Didot, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 11vw, 8rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      animation: appear 1.6s ease-out both;
+    }
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(0.15em); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      h1 { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Morin</h1>
+</body>
+</html>
